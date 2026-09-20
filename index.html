@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora — Sample Website Home</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Public Sans', system-ui, sans-serif; background: #FAF8F3; color: #1C1C1A; }
+  h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; margin: 0; }
+  a { color: inherit; text-decoration: none; }
+  img, svg { display: block; }
+  .nav-link:hover { color: #1F6F5C; }
+  .btn-primary:hover { background: #18543F; }
+  .btn-ghost:hover { border-color: #1C1C1A; }
+  .feature-card:hover { border-color: #1F6F5C; box-shadow: 0 8px 24px rgba(28,28,26,0.06); }
+
+  header { padding: 24px 64px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E8E4DA; }
+  nav { display: flex; align-items: center; gap: 40px; }
+  .hero { padding: 96px 64px 80px; display: flex; align-items: center; gap: 64px; }
+  .logo-strip { padding: 32px 64px; border-top: 1px solid #E8E4DA; border-bottom: 1px solid #E8E4DA; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  .features { padding: 96px 64px; display: flex; flex-direction: column; gap: 56px; }
+  .feature-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .testimonial { padding: 80px 64px; background: #1C1C1A; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 32px; }
+  .cta { padding: 88px 64px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+  footer { padding: 56px 64px 40px; border-top: 1px solid #E8E4DA; display: flex; flex-direction: column; gap: 40px; }
+
+  @media (max-width: 900px) {
+    header, .hero, .logo-strip, .features, .testimonial, .cta, footer { padding-left: 24px; padding-right: 24px; }
+    nav { display: none; }
+    .hero { flex-direction: column; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .logo-strip { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center; gap: 10px;">
+    <div style="width: 32px; height: 32px; border-radius: 8px; background: #1F6F5C; display: flex; align-items: center; justify-content: center;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FAF8F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 20 L4 20 Z"></path></svg>
+    </div>
+    <span style="font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: -0.02em;">Aurora</span>
+  </div>
+  <nav>
+    <a class="nav-link" href="#product" style="font-size: 15px; font-weight: 500; color: #4A4A45;">Product</a>
+    <a class="nav-link" href="#features" style="font-size: 15px; font-weight: 500; color: #4A4A45;">Features</a>
+    <a class="nav-link" href="#pricing" style="font-size: 15px; font-weight: 500; color: #4A4A45;">Pricing</a>
+    <a class="nav-link" href="#about" style="font-size: 15px; font-weight: 500; color: #4A4A45;">About</a>
+  </nav>
+  <div style="display: flex; align-items: center; gap: 16px;">
+    <a href="#signin" style="font-size: 15px; font-weight: 500; color: #1C1C1A;">Sign in</a>
+    <a class="btn-primary" href="#start" style="background: #1F6F5C; color: #FAF8F3; padding: 10px 20px; border-radius: 8px; font-size: 15px; font-weight: 600;">Get started</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div style="flex: 1; max-width: 560px; display: flex; flex-direction: column; gap: 28px;">
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: #EEF3EE; border: 1px solid #D3E3D8; border-radius: 999px; padding: 6px 14px; width: fit-content;">
+      <span style="width: 6px; height: 6px; border-radius: 999px; background: #1F6F5C;"></span>
+      <span style="font-size: 13px; font-weight: 600; color: #1F6F5C;">Now in public beta</span>
+    </div>
+    <h1 style="font-size: 56px; line-height: 1.05; letter-spacing: -0.02em;">Plan your week without the busywork</h1>
+    <p style="font-size: 18px; line-height: 1.6; color: #55554F; margin: 0;">Aurora turns your calendar, tasks and notes into one clear plan for the day — so you spend less time organizing and more time doing.</p>
+    <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
+      <a class="btn-primary" href="#start" style="background: #1F6F5C; color: #FAF8F3; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 600;">Start for free</a>
+      <a class="btn-ghost" href="#demo" style="border: 1px solid #D8D4C8; padding: 13px 27px; border-radius: 10px; font-size: 16px; font-weight: 600; color: #1C1C1A;">Watch demo</a>
+    </div>
+    <p style="font-size: 13px; color: #8A8A82; margin: 4px 0 0;">No credit card required &middot; Free for up to 3 projects</p>
+  </div>
+  <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 100%; max-width: 520px; aspect-ratio: 4 / 3; background: #FFFFFF; border: 1px solid #E8E4DA; border-radius: 20px; box-shadow: 0 24px 64px rgba(28,28,26,0.08); display: flex; flex-direction: column; overflow: hidden;">
+      <div style="padding: 16px 20px; border-bottom: 1px solid #F0EEE6; display: flex; gap: 8px;">
+        <span style="width: 10px; height: 10px; border-radius: 999px; background: #E8E4DA;"></span>
+        <span style="width: 10px; height: 10px; border-radius: 999px; background: #E8E4DA;"></span>
+        <span style="width: 10px; height: 10px; border-radius: 999px; background: #E8E4DA;"></span>
+      </div>
+      <div style="flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 12px;">
+        <div style="height: 14px; width: 40%; background: #EEF3EE; border-radius: 4px;"></div>
+        <div style="height: 44px; background: #F7F5EF; border-radius: 10px; display: flex; align-items: center; padding: 0 16px; gap: 10px;">
+          <span style="width: 18px; height: 18px; border-radius: 5px; background: #1F6F5C;"></span>
+          <div style="height: 10px; width: 55%; background: #E1DED2; border-radius: 4px;"></div>
+        </div>
+        <div style="height: 44px; background: #F7F5EF; border-radius: 10px; display: flex; align-items: center; padding: 0 16px; gap: 10px;">
+          <span style="width: 18px; height: 18px; border-radius: 5px; background: #D8D4C8;"></span>
+          <div style="height: 10px; width: 40%; background: #E1DED2; border-radius: 4px;"></div>
+        </div>
+        <div style="height: 44px; background: #F7F5EF; border-radius: 10px; display: flex; align-items: center; padding: 0 16px; gap: 10px;">
+          <span style="width: 18px; height: 18px; border-radius: 5px; background: #D8D4C8;"></span>
+          <div style="height: 10px; width: 65%; background: #E1DED2; border-radius: 4px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="logo-strip">
+  <span style="font-size: 13px; font-weight: 600; color: #8A8A82; letter-spacing: 0.04em; text-transform: uppercase;">Trusted by teams at</span>
+  <div style="display: flex; align-items: center; gap: 48px; flex-wrap: wrap; font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 600; color: #B7B3A6;">
+    <span>Northwind</span>
+    <span>Cartwell</span>
+    <span>Bellhaven</span>
+    <span>Ludlow &amp; Co</span>
+    <span>Marlowe</span>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <div style="max-width: 620px; display: flex; flex-direction: column; gap: 16px;">
+    <span style="font-size: 14px; font-weight: 700; color: #1F6F5C; letter-spacing: 0.04em; text-transform: uppercase;">Why Aurora</span>
+    <h2 style="font-size: 36px; letter-spacing: -0.01em; line-height: 1.2;">Everything your day needs, nothing it doesn't</h2>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card" style="background: #FFFFFF; border: 1px solid #E8E4DA; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 44px; height: 44px; border-radius: 10px; background: #EEF3EE; display: flex; align-items: center; justify-content: center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M3 9h18M8 2v4M16 2v4"></path></svg>
+      </div>
+      <h3 style="font-size: 20px; font-weight: 600;">One calendar, every source</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #55554F; margin: 0;">Sync meetings, tasks and reminders from the tools you already use into a single view.</p>
+    </div>
+    <div class="feature-card" style="background: #FFFFFF; border: 1px solid #E8E4DA; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 44px; height: 44px; border-radius: 10px; background: #EEF3EE; display: flex; align-items: center; justify-content: center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 L3 14h8l-1 8 10-12h-8z"></path></svg>
+      </div>
+      <h3 style="font-size: 20px; font-weight: 600;">Smart daily plans</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #55554F; margin: 0;">Aurora reorders your day automatically when priorities shift, so the plan stays realistic.</p>
+    </div>
+    <div class="feature-card" style="background: #FFFFFF; border: 1px solid #E8E4DA; border-radius: 16px; padding: 32px; display: flex; flex-direction: column; gap: 16px;">
+      <div style="width: 44px; height: 44px; border-radius: 10px; background: #EEF3EE; display: flex; align-items: center; justify-content: center;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F6F5C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+      </div>
+      <h3 style="font-size: 20px; font-weight: 600;">Built for teams</h3>
+      <p style="font-size: 15px; line-height: 1.6; color: #55554F; margin: 0;">Share plans, hand off tasks and see teammates' availability without leaving your day view.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#3E7A67"><path d="M7 17c-1.5 0-2.5-1-2.5-2.5C4.5 12 6 9 9 7l1 1.5C8 10 7 11.5 7 13c1.5 0 2.5 1 2.5 2s-1 2-2.5 2zm9 0c-1.5 0-2.5-1-2.5-2.5C13.5 12 15 9 18 7l1 1.5c-2 1.5-3 3-3 4.5 1.5 0 2.5 1 2.5 2s-1 2-2.5 2z"></path></svg>
+  <p style="font-family: 'Fraunces', Georgia, serif; font-size: 28px; line-height: 1.5; color: #FAF8F3; max-width: 760px; margin: 0;">Aurora replaced three separate tools on our team. We plan Monday in ten minutes instead of an hour, and nothing falls through the cracks anymore.</p>
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="width: 40px; height: 40px; border-radius: 999px; background: #3E7A67;"></div>
+    <div style="text-align: left;">
+      <div style="font-size: 14px; font-weight: 600; color: #FAF8F3;">Priya Nandan</div>
+      <div style="font-size: 13px; color: #A6A69E;">Head of Operations, Cartwell</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2 style="font-size: 40px; letter-spacing: -0.01em; max-width: 640px;">Ready to plan your week differently?</h2>
+  <p style="font-size: 17px; color: #55554F; max-width: 520px; margin: 0;">Join thousands of teams who start their day with a clear, realistic plan.</p>
+  <a class="btn-primary" href="#start" style="background: #1F6F5C; color: #FAF8F3; padding: 14px 32px; border-radius: 10px; font-size: 16px; font-weight: 600; margin-top: 8px;">Start for free</a>
+</section>
+
+<footer>
+  <div style="display: flex; justify-content: space-between; gap: 48px; flex-wrap: wrap;">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <div style="width: 28px; height: 28px; border-radius: 7px; background: #1F6F5C; display: flex; align-items: center; justify-content: center;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FAF8F3" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L20 20 L4 20 Z"></path></svg>
+      </div>
+      <span style="font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 600;">Aurora</span>
+    </div>
+    <div style="display: flex; gap: 64px; flex-wrap: wrap;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 13px; font-weight: 700; color: #8A8A82; text-transform: uppercase; letter-spacing: 0.04em;">Product</span>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Features</a>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Pricing</a>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Integrations</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 13px; font-weight: 700; color: #8A8A82; text-transform: uppercase; letter-spacing: 0.04em;">Company</span>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">About</a>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Careers</a>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Blog</a>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span style="font-size: 13px; font-weight: 700; color: #8A8A82; text-transform: uppercase; letter-spacing: 0.04em;">Legal</span>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Privacy</a>
+        <a class="nav-link" href="#" style="font-size: 14px; color: #4A4A45;">Terms</a>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #E8E4DA; padding-top: 24px; flex-wrap: wrap; gap: 8px;">
+    <span style="font-size: 13px; color: #8A8A82;">&copy; 2026 Aurora, Inc. All rights reserved.</span>
+    <span style="font-size: 13px; color: #8A8A82;">Made for people who'd rather be doing than planning.</span>
+  </div>
+</footer>
+
+</body>
+</html>
